@@ -1,0 +1,85 @@
+\begin{problem}{shirts}{standard input}{standard output}{1.5 seconds}{256 megabytes}
+
+The trainers of December Course 2024 are arranging participants into $N$ groups, numbered $1$ to $N$, placed in a row. For simplicity, each participant in group $i$ initially wears a shirt of color $i$.
+
+The trainers can issue commands to modify group shirt colors or check specific color statistics. They provide $Q$ commands in total, which must be processed in the given order. Commands are of the following two types:
+
+\begin{itemize}
+\item $1\ x\ c$: Change the shirt color of trainee $x$ and all connected trainees (trainees reachable by moving through adjacent groups with the same shirt color) to color $c$.
+
+\item $2\ c$: Report how many trainees are currently wearing shirts of color $c$.
+\end{itemize}
+
+\InputFile
+The first line of input contains two integers, $N$ and $Q$
+
+Then follows $Q$ lines, each describing a query.
+
+Each query is in one of the following formats:
+
+\begin{itemize}
+\item $1\ x\ c$
+
+\item $2\ c$
+\end{itemize}
+
+as described above.
+
+\OutputFile
+Let $q$ be the number of type $2$ queries. 
+
+Print $q$ lines, where the $i$-th line contains the answer to the $i$-th type $2$ query.
+
+\Scoring
+For all testcases it is guaranteed that
+
+\begin{itemize}
+\item $1 \leq N, Q \leq 3 \times 10^5$
+
+\item $1 \leq x, c \leq N$
+
+\item There is at least one query of type $2$.
+
+\item All input values are integers.
+\end{itemize}
+
+\begin{center}
+\begin{tabular}{|c|c|c|} 
+\hline
+\textbf{Subtask} & \textbf{Score} & \textbf{Additional constraints} \\
+\hline
+1 & 10 & There will be no queries of type 1. \\
+\hline
+2 & 30 & $1 \leq N, Q \leq 10^4$ \\ 
+\hline
+3 & 60 & No additional constraints. \\
+\hline
+\end{tabular}
+\end{center}
+
+\Example
+
+\begin{example}
+\exmpfile{example.01}{example.01.a}%
+\end{example}
+
+\Note
+For the sample testcase:
+
+At the beginning, the shirts are like so\\
+($1$, $2$, $3$, $4$, $5$)\\
+After the first query, (Change trainee $5$'s shirt to colour $4$)\\
+($1$, $2$, $3$, $4$, $4$)\\
+After the second query, (Change trainee $4$'s shirt to colour $2$)\\
+($1$, $2$, $3$, $2$, $2$)\\
+For the third query, output number of trainees wearing a shirt of colour 2\\
+There are 3 students wearing a shirt of colour 2\\
+After the fourth query, (Change trainee $3$'s shirt to colour $2$)\\
+($1$, $2$, $2$, $2$, $2$)\\
+After the fifth query, (Change trainee $2$'s shirt to colour $3$)\\
+($1$, $3$, $3$, $3$, $3$)\\
+For the sixth query, output number of trainees wearing a shirt of colour 3\\
+There are 4 students wearing a shirt of colour 3\\
+
+\end{problem}
+

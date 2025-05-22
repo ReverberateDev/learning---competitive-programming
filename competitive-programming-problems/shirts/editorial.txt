@@ -1,0 +1,20 @@
+For all testcases
+1≤N≤5×10^5
+1≤Q≤2×10^5
+In queries of the first type,
+1≤x≤N.
+In queries of the first and second types,
+1≤c≤N.
+There is at least one query of the second type.
+All input values are integers.
+
+Subtask 1
+There will be no queries of type 1
+Solution:
+Keep track of how many trainees are wearing shirts of colour C
+
+Subtask 2
+No Additional Constraints
+Solution:
+Using interval sets
+

@@ -1,0 +1,77 @@
+Legend:
+The trainers at December Course 2024 are overwhelmed by the number of signups this year. With only a small number of trainers available, it's common to see trainers moving between labs. TheRaptor wants to monitor each trainer's movements to ensure no one is slacking off.
+
+Trainers can move to a new lab $i$, and TheRaptor wants to know how many trainers are currently in lab $j$. Your task is to help TheRaptor answer these queries efficiently.
+
+You will be given $q$ queries, which can be of two types:
+
+    $1\ s\ i$: Trainer $s$ moves to lab $i$. Trainer $s$ may move back to the same lab or to a different one (To go to the toilet lol).
+    
+    $2\ j$: Output the number of trainers currently in lab $j$.
+
+Input format:
+The input is given in the following format:
+
+$q$
+
+$query_1$
+
+$query_2$
+
+$\vdots$
+
+$query_q$
+
+Each query is in one of the following formats:
+
+$1\ s\ i$
+
+$2\ j$
+
+Where:
+
+    $s$ is the name of the trainer (a string of lowercase English letters).
+    $i$ and $j$ are integers representing lab indices.
+
+Output format:
+For each type $2$ query, output the number of trainers currently in lab $j$, each on a new line.
+
+Scoring:
+Scoring:
+\begin{table}[h!]
+    \begin{center}
+        \begin{tabular}{|c|c|c|} 
+            \hline
+            \textbf{Subtask} & \textbf{Score} & \textbf{Additional constraints} \\
+            \hline
+            1 & 20 & $q \leq 100$, $i, j \leq 2$ \\
+            \hline
+            2 & 30 & $q \leq 10^3$, $i, j \leq 100$, number of trainers $\leq 10^3$ \\
+            \hline
+            3 & 50 & $q \leq 10^5$, $i, j \leq 10^5$, number of trainers $\leq 10^5$ \\
+            \hline
+        \end{tabular}
+    \end{center}
+\end{table}
+
+Notes:
+Given the input:
+
+7  
+1 alice 2  
+1 bob 3  
+2 2  
+1 alice 3  
+2 3  
+1 charlie 3  
+2 3  
+
+The explanation is as follows:
+
+    After the first query, trainer "alice" moves to lab 2.
+    After the second query, trainer "bob" moves to lab 3.
+    The third query asks for the number of trainers in lab 2. The result is $1$ ("alice").
+    After the fourth query, trainer "alice" moves to lab 3.
+    The fifth query asks for the number of trainers in lab 3. The result is $2$ ("bob" and "alice").
+    After the sixth query, trainer "charlie" moves to lab 3.
+    The seventh query asks for the number of trainers in lab 3. The result is $3$ ("bob", "alice", and "charlie").

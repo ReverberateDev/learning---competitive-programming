@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<problem revision="6" short-name="shirts" url="https://polygon.codeforces.com/p1cvbWw/ReverberateDev/shirts">
+    <names>
+        <name language="english" value="shirts"/>
+    </names>
+    <statements>
+        <statement charset="UTF-8" language="english" mathjax="true" path="statements/english/problem.tex" type="application/x-tex"/>
+        <statement charset="UTF-8" language="english" mathjax="true" path="statements/.html/english/problem.html" type="text/html"/>
+        <statement language="english" path="statements/.pdf/english/problem.pdf" type="application/pdf"/>
+    </statements>
+    <tutorials>
+        <tutorial charset="UTF-8" language="english" mathjax="true" path="statements/english/tutorial.tex" type="application/x-tex"/>
+    </tutorials>
+    <judging cpu-name="Intel(R) Core(TM) i3-8100 CPU @ 3.60GHz" cpu-speed="3600" input-file="" output-file="" run-count="1">
+        <testset name="tests">
+            <time-limit>1500</time-limit>
+            <memory-limit>268435456</memory-limit>
+            <test-count>28</test-count>
+            <input-path-pattern>tests/%02d</input-path-pattern>
+            <answer-path-pattern>tests/%02d.a</answer-path-pattern>
+            <tests>
+                <test description="3&#13;&#10;4" method="manual" sample="true"/>
+                <test cmd="killergen -n 300000 -q 300000 -queryChance 100 -numOfColours 10" method="generated"/>
+                <test cmd="killergen -n 300000 -q 300000 -queryChance 100 -numOfColours 30" method="generated"/>
+                <test cmd="killergen -n 300000 -q 300000 -queryChance 100 -numOfColours 15" method="generated"/>
+                <test cmd="killergen -n 300000 -q 300000 -queryChance 100 -numOfColours 5" method="generated"/>
+                <test cmd="killergen -n 300000 -q 300000 -queryChance 100 -numOfColours 1" method="generated"/>
+                <test cmd="killergen -n 10 -q 300000 -queryChance 100 -numOfColours 3" method="generated"/>
+                <test cmd="killergen -n 5 -q 300000 -queryChance 100 -numOfColours 1" method="generated"/>
+                <test cmd="killergen -n 10000 -q 10000 -queryChance 50 -numOfColours 10" method="generated"/>
+                <test cmd="killergen -n 10000 -q 10000 -queryChance 30 -numOfColours 30" method="generated"/>
+                <test cmd="killergen -n 10000 -q 10000 -queryChance 10 -numOfColours 15" method="generated"/>
+                <test cmd="killergen -n 10000 -q 10000 -queryChance 70 -numOfColours 5" method="generated"/>
+                <test cmd="killergen -n 10000 -q 10000 -queryChance 90 -numOfColours 1" method="generated"/>
+                <test cmd="killergen -n 10 -q 10000 -queryChance 20 -numOfColours 3" method="generated"/>
+                <test cmd="killergen -n 10000 -q 10000 -queryChance 50 -numOfColours 1" method="generated"/>
+                <test cmd="killergen -n 10000 -q 10000 -queryChance 10 -numOfColours 5" method="generated"/>
+                <test cmd="killergen -n 300000 -q 300000 -queryChance 50 -numOfColours 10" method="generated"/>
+                <test cmd="killergen -n 300000 -q 300000 -queryChance 30 -numOfColours 30" method="generated"/>
+                <test cmd="killergen -n 300000 -q 300000 -queryChance 30 -numOfColours 300" method="generated"/>
+                <test cmd="killergen -n 300000 -q 300000 -queryChance 30 -numOfColours 3000" method="generated"/>
+                <test cmd="killergen -n 300000 -q 300000 -queryChance 30 -numOfColours 30000" method="generated"/>
+                <test cmd="killergen -n 300000 -q 300000 -queryChance 30 -numOfColours 300000" method="generated"/>
+                <test cmd="killergen -n 300000 -q 300000 -queryChance 10 -numOfColours 15" method="generated"/>
+                <test cmd="killergen -n 300000 -q 300000 -queryChance 70 -numOfColours 5" method="generated"/>
+                <test cmd="killergen -n 300000 -q 300000 -queryChance 90 -numOfColours 1" method="generated"/>
+                <test cmd="killergen -n 10 -q 300000 -queryChance 20 -numOfColours 3" method="generated"/>
+                <test cmd="killergen -n 300000 -q 300000 -queryChance 50 -numOfColours 1" method="generated"/>
+                <test cmd="killergen -n 300000 -q 300000 -queryChance 10 -numOfColours 5" method="generated"/>
+            </tests>
+        </testset>
+    </judging>
+    <files>
+        <resources>
+            <file path="files/olymp.sty"/>
+            <file path="files/problem.tex"/>
+            <file path="files/statements.ftl"/>
+            <file path="files/testlib.h" type="h.g++"/>
+            <file path="files/tutorial.tex"/>
+        </resources>
+        <executables>
+            <executable>
+                <source path="files/genST1.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="files/genST1.exe" type="exe.win32"/>
+            </executable>
+            <executable>
+                <source path="files/genST2.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="files/genST2.exe" type="exe.win32"/>
+            </executable>
+            <executable>
+                <source path="files/genST3.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="files/genST3.exe" type="exe.win32"/>
+            </executable>
+            <executable>
+                <source path="files/killergen.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="files/killergen.exe" type="exe.win32"/>
+            </executable>
+        </executables>
+    </files>
+    <assets>
+        <checker name="std::lcmp.cpp" type="testlib">
+            <source path="files/check.cpp" type="cpp.g++17"/>
+            <binary path="check.exe" type="exe.win32"/>
+            <copy path="check.cpp"/>
+            <testset>
+                <test-count>0</test-count>
+                <input-path-pattern>files/tests/checker-tests/%02d</input-path-pattern>
+                <output-path-pattern>files/tests/checker-tests/%02d.o</output-path-pattern>
+                <answer-path-pattern>files/tests/checker-tests/%02d.a</answer-path-pattern>
+                <tests/>
+            </testset>
+        </checker>
+        <solutions>
+            <solution tag="rejected">
+                <source path="solutions/ac1a.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/ac1a.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="rejected">
+                <source path="solutions/ac2a.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/ac2a.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="main">
+                <source path="solutions/ac3a.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/ac3a.exe" type="exe.win32"/>
+            </solution>
+            <solution tag="accepted">
+                <source path="solutions/ac3b.cpp" type="cpp.gcc14-64-msys2-g++23"/>
+                <binary path="solutions/ac3b.exe" type="exe.win32"/>
+            </solution>
+        </solutions>
+    </assets>
+    <properties>
+        <property name="tests-wellformed" value="true"/>
+    </properties>
+    <stresses>
+        <stress-count>0</stress-count>
+        <stress-path-pattern>stresses/%03d</stress-path-pattern>
+        <list/>
+    </stresses>
+</problem>

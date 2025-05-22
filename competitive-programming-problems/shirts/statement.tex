@@ -1,0 +1,43 @@
+Legend:  
+The trainers of December Course 2024 are arranging participants into $N$ groups, numbered $1$ to $N$, placed in a row. For simplicity, each participant in group $i$ initially wears a shirt of color $i$.  
+
+The trainers can issue commands to modify group shirt colors or check specific color statistics. They provide $Q$ commands in total, which must be processed in the given order. Commands are of the following two types:  
+
+1. $1\ x\ c$: Change the shirt color of trainee $x$ and all connected trainees (trainees reachable by moving through adjacent groups with the same shirt color) to color $c$.  
+
+2. $2\ c$: Report how many trainees are currently wearing shirts of color $c$.  
+
+Input format:  
+The input is given in the following format:  
+
+$N\ Q$  
+
+$query1$  
+
+$query2$  
+
+$\vdots$  
+
+$queryQ$  
+
+Each query is in one of the following formats:  
+$1\ x\ c$  
+$2\ c$  
+
+Output format:  
+Let $q$ be the number of type $2$ queries. Print $q$ lines, where the $i$-th line contains the answer to the $i$-th type $2$ query.  
+
+Scoring:
+\begin{table}[h!]
+    \begin{center}
+        \begin{tabular}{|c|c|c|} 
+            \hline
+            \textbf{Subtask} & \textbf{Score} & \textbf{Additional constraints} \\
+            \hline
+            1 & 30 & There will be no queries of type 1. \\
+            \hline
+            2 & 70 & No additional constraints. \\
+            \hline
+        \end{tabular}
+    \end{center}
+\end{table}

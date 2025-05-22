@@ -1,0 +1,22 @@
+For all testcases
+q <= 10^7, s will be a string of lowercase alphabet consisting of not more than 3 characters, i, j <= 10^5
+int max_q = 10000000;
+int max_slen = 10;
+int max_i = 100000;
+int max_j = 100000;
+
+Subtask 1
+q <= 10^7, once a trainer goes to a lab, the trainer will not go to any other labs
+Solution:
+Keep track of how many trainers have entered a lab
+
+Subtask 2
+q <= 10^4
+Solution:
+Using an ordered map to store trainer locations will work
+
+Subtask 3
+q <= 2*10^5
+Solution:
+Using only an unordered map will work for this
+
