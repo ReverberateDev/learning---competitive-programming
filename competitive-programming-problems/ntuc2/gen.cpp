@@ -110,11 +110,18 @@ int main(int argc, char* argv[]) {
 }
 
 /*
-gen --n=1 --q=1 --max_val=10 > $  
-gen --n=50 --q=50 --max_val=100000 --p_create=0.6 --p_destroy=0.3 > $  
-gen --n=2000 --q=2000 --max_val=1e9 --p_create=0.5 --p_destroy=0.4 > $  
-gen --n=200000 --q=200000 --max_val=1000000 --p_create=0.5 --p_destroy=0.4 > $  
-gen --n=200000 --q=200000 --min_val=999900 --max_val=1000000 --p_create=0.6 --p_destroy=0.3 > $  
-gen --n=200000 --q=200000 --min_val=1000001 --max_val=1000000000 --p_create=0.5 --p_destroy=0.4 > $  
-gen --n=200000 --q=200000 --max_val=1000000000 --p_create=0.6 --p_destroy=0.3 > $  
+gen --n=1 --q=1 --max_val=10 > $
+gen --n=2 --q=50 --max_val=1 --p_create=1.0 > $
+gen --n=1000 --q=1000 --max_val=100 > $
+gen --n=500 --q=500 --max_val=1e9 --p_create=0.6 --p_destroy=0.3 > $
+gen --n=2000 --q=2000 --max_val=1e9 --p_create=0.5 --p_destroy=0.4 > $
+gen --n=2000 --q=2000 --max_val=1e9 --p_create=0.4 --p_destroy=0.5 > $
+gen --n=200000 --q=200000 --max_val=1000000 --p_create=0.5 --p_destroy=0.4 > $
+gen --n=200000 --q=200000 --min_val=999900 --max_val=1000000 --p_create=0.6 --p_destroy=0.3 > $
+gen --n=200000 --q=1000 --max_val=1000000 > $
+gen --n=1000 --q=200000 --max_val=1000000 --p_create=0.5 --p_destroy=0.4 > $
+gen --n=200000 --q=200000 --min_val=1000001 --max_val=2000000 --p_create=0.5 --p_destroy=0.4 > $
+gen --n=200000 --q=200000 --max_val=1000000000 --p_create=0.6 --p_destroy=0.3 > $
+gen --n=200000 --q=200000 --max_val=1000000000 --p_create=0.5 --p_destroy=0.5 > $
+gen --n=200000 --q=200000 --min_val=900000000 --max_val=1000000000 > $
 */
