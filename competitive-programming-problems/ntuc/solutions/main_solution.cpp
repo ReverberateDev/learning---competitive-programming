@@ -27,9 +27,6 @@ int main() {
     for (int i = 0; i < n; ++i) std::cin >> p_in[i];
 
     for (int i = 0; i < n; ++i) {
-        if(p_in[i] == 1){
-            std::cout << "1 detected\n";
-        }
         sellers[i] = {s_in[i], p_in[i]};
     }
 
@@ -43,7 +40,6 @@ int main() {
         }
         if (seller.stock == -1) {
             total_cost += k * seller.price;
-            std::cout << "seller price: " << seller.price << std::endl;
             k = 0;
         } else {
             long long buy_amount = std::min(k, seller.stock);
